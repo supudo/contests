@@ -1,5 +1,5 @@
 // @supudo
-// clang++ -Wall -std=c++14 num_ways.cpp -o num_ways
+// clang++ -Wall -std=c++14 num_ways.cpp -o ./build/num_ways
 
 #include <iostream>
 #include <vector>
