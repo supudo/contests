@@ -1,5 +1,5 @@
 // @supudo
-// clang++ -Wall -std=c++14 num_ways.cpp -o ./build/num_ways
+// clang++ -Wall -std=c++14 local_num_ways.cpp -o ./build/local_num_ways
 
 #include <iostream>
 #include <vector>
@@ -48,22 +48,22 @@ int main() {
 }
 
 int calculateNumWays(int steps, int walks) {
-  if (steps <= 1) 
-    return steps; 
-  int res = 0; 
-  for (int i = 1; i <= walks && i <= steps; i++) 
-    res += calculateNumWays2(steps - i, walks); 
-  return res; 
+  if (steps <= 1)
+    return steps;
+  int res = 0;
+  for (int i = 1; i <= walks && i <= steps; i++)
+    res += calculateNumWays2(steps - i, walks);
+  return res;
 }
 
 int calculateNumWays2(int steps, int walks) {
-  int res[steps]; 
+  int res[steps];
   res[0] = 1;
-  res[1] = 1; 
-  for (int i = 2; i < steps; i++) { 
-    res[i] = 0; 
-    for (int j = 1; j <= walks && j <= i; j++) 
-      res[i] += res[i - j]; 
-  } 
+  res[1] = 1;
+  for (int i = 2; i < steps; i++) {
+    res[i] = 0;
+    for (int j = 1; j <= walks && j <= i; j++)
+      res[i] += res[i - j];
+  }
   return res[steps - 1];
 }
