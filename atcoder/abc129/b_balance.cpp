@@ -1,5 +1,5 @@
 // @supudo
-// clang++ -Wall -std=c++14 atcoder_abc129_balance.cpp -o ./build/atcoder_abc129_balance -DLOCAL
+// clang++ -O2 -Wall -std=c++14 atcoder_abc129_balance.cpp -o ../build/atcoder_abc129_balance -DLOCAL
 
 #include <iostream>
 #include <vector>
