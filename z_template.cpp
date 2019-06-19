@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <algorithm>
 
 #define forto(var, from, to) for (int var=from; var<to; ++var)
 #define forfrom(var, from, to) for (int var=from; var>to; --var)
