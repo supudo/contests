@@ -19,7 +19,7 @@ int main() {
   cout.precision(10);
 
 #ifdef LOCALHOST
-  cout << "Time elapses:" << (1.0 * clock() / CLOCKS_PER_SEC)  << " secnds!" << endl;
+  cout << "Time elapses:" << (1.0 * clock() / CLOCKS_PER_SEC)  << " seconds!" << endl;
   cout.flush();
 #endif
 
