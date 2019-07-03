@@ -43,7 +43,9 @@ int main() {
     *p2-- = temp;
   }
 
+#ifdef LOCAL
   cout << "Reversed array: " << endl;
+#endif
   for (int i=0; i<arrsize; i++) {
     cout << " " << arr[i];
   }

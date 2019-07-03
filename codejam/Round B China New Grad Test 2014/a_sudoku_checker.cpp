@@ -1,7 +1,7 @@
 // @supudo
 // clang++ -O2 -Wall -std=c++14 a_sudoku_checker.cpp -o ./build/a_sudoku_checker -DLOCAL
 // g++ -O2 -std=gnu++14 -Wall -Wextra -Wfatal-errors -Wshadow -Wno-vla-extension -pedantic -o ./build/a_sudoku_checker a_sudoku_checker.cpp -DLOCALHOST -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC
-// ../build/z_template
+// ./build/a_sudoku_checker
 
 #include <iostream>
 #include <vector>
