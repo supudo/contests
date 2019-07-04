@@ -16,7 +16,7 @@ int main() {
     cin >> n >> q;
     cin.ignore();
 
-    vector<vector<int>> nums;
+    vector<vector<int >> nums;
     for (int i=0; i<n; i++) {
       string line;
       getline(cin, line);
