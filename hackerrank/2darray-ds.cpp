@@ -1,5 +1,5 @@
 // @supudo
-// g++ -O2 -std=gnu++14 -Wall -Wextra -Wfatal-errors -Wshadow -Wno-vla-extension -pedantic -o ./build/array-ds array-ds.cpp -DLOCALHOST -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC
+// g++ -O2 -std=gnu++14 -Wall -Wextra -Wfatal-errors -Wshadow -Wno-vla-extension -pedantic -o ./build/2darray-ds 2darray-ds.cpp -DLOCALHOST -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC
 // ./build/array-ds
 // https://www.hackerrank.com/challenges/2d-array/problem?h_r=next-challenge&h_v=zen
 // https://www.geeksforgeeks.org/maximum-sum-hour-glass-matrix/
@@ -15,21 +15,32 @@ using namespace std;
 int main() { _
   int arr[6][6];
   int number;
-  int r = 0, c = 0;
+  int rc = 0, cc = 0;
   while (cin >> number) {
-    arr[r][c] = number;
-    c += 1;
+    arr[rc][cc] = number;
+    cc += 1;
   }
 
-#ifdef LOCALHOST
-  cout << "Input matrix: " << endl;
-  for (int i=0; i<6; ++i) {
-    for (int j=0; j<6; ++j)
-      cout << arr[i][j] << " ";
-    cout << endl;
+  int res = -100000000000000;
+  for (int r=1; r<=4; r++) {
+    for (int c=1; c<=4; c++) {
+      int m = arr[r][c] + arr[r-1][c-1] + arr[r-1][c] + arr[r-1][c+1]
+                        + arr[r+1][c-1] + arr[r+1][c] + arr[r+1][c+1];
+      res = max(res, m);
+    }
   }
-  cout << endl;
-#endif
+
+  cout << res;
+
+// #ifdef LOCALHOST
+//   cout << "Input matrix: " << endl;
+//   for (int i=0; i<6; ++i) {
+//     for (int j=0; j<6; ++j)
+//       cout << arr[i][j] << " ";
+//     cout << endl;
+//   }
+//   cout << endl;
+// #endif
 
 #ifdef LOCALHOST
   cout << "Time elapses:" << (1.0 * clock() / CLOCKS_PER_SEC)  << " seconds!" << endl;
