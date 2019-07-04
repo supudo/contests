@@ -28,7 +28,7 @@ int main() { _
     cc += 1;
   }
 
-  lli res = -100000000000000;
+  int res = -1000000;
   for (int r=1; r<=4; r++) {
     for (int c=1; c<=4; c++) {
       int m = arr[r][c] + arr[r-1][c-1] + arr[r-1][c] + arr[r-1][c+1]
