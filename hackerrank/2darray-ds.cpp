@@ -12,6 +12,13 @@
 
 using namespace std;
 
+typedef long long ll;
+typedef long long int lli;
+typedef vector<int> vi;
+typedef vector<ll> vll;
+typedef vector<lli> vlli;
+typedef vector<string> vs;
+
 int main() { _
   int arr[6][6];
   int number;
@@ -21,7 +28,7 @@ int main() { _
     cc += 1;
   }
 
-  int res = -100000000000000;
+  lli res = -100000000000000;
   for (int r=1; r<=4; r++) {
     for (int c=1; c<=4; c++) {
       int m = arr[r][c] + arr[r-1][c-1] + arr[r-1][c] + arr[r-1][c+1]
