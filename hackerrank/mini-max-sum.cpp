@@ -9,7 +9,7 @@ vector<string> split_string(string);
 
 // Complete the miniMaxSum function below.
 void miniMaxSum(vector<int> arr) {
-  sort(arr.begin(), arr.end(), [](int lhs, int rhs) { return lhs < rhs; });
+  sort(arr.begin(), arr.end(), [ ] (int lhs, int rhs) { return lhs < rhs; });
   long long min = 0, max = 0;
   for (int i=0; i<4; i++) {
     min += arr[i];
